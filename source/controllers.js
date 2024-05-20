@@ -34,6 +34,10 @@ export const detailPage = async (res, id) => {
         '   <body>' +
         `       <h1>${t.title}</h1>` +
         `       <p>${t.desc}</p>` +
+                `<p>
+                    <span>${new Date(t.createdAt).toLocaleDateString()}</span>
+                    <span>${new Date(t.createdAt).toLocaleTimeString()}</span>
+                </p>`
         '   </body>' +
         '</html>';
     res.end(s)
